@@ -1,11 +1,13 @@
+import java.awt.*;
+
 public class Item {
     private int id;
     private int positionX;
     private int positionY;
-    private String color;
+    private Color color;
 
 
-    public Item(int id, int positionX, int positionY, String color) {
+    public Item(int positionX, int positionY, Color color) {
         this.positionX = positionX;
         this.positionY = positionY;
         this.color = color;
@@ -23,7 +25,7 @@ public class Item {
         this.positionY = positionY;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
@@ -39,7 +41,7 @@ public class Item {
         return positionY;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 }
