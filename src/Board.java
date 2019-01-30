@@ -116,11 +116,6 @@ public class Board extends JPanel implements WindowListener,ActionListener {
     }
 
     private void CheckItems(ArrayList<Item> items) {
-        try {
-            sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         if (items.get(0).getColor() == items.get(1).getColor()
         && items.get(0) != items.get(1)){
             foundItems++;
