@@ -14,15 +14,19 @@ public class Table {
         this.width = width;
         this.length = length;
         dimension = new Dimension(width, length);
-        this.createFrame(name);
+        this.createFrame(name, width, length);
     }
 
-    private void createFrame(String name) {
+    private void createFrame(String name, int width, int length) {
         //create Frame
         this.frame = new JFrame(name);
+        //frame.getContentPane().setBackground( Color.RED );
+
         frame.setSize(width, length);
         frame.setMinimumSize(dimension);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(new FlowLayout(FlowLayout.LEFT));
+        frame.setResizable(false);
 
         this.board = new Board(frame);
 
